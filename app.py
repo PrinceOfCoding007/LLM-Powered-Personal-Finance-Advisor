@@ -7,30 +7,39 @@ from utils import plot_spending_pie, plot_spending_bar
 st.set_page_config(page_title="Finance Advisor", layout="wide")
 st.title("💸 LLM-Powered Personal Finance Advisor")
 
-uploaded_file = st.file_uploader("📄 Upload your bank statement (PDF)", type="pdf")
+st.markdown("""
+Upload your **bank statement PDF**, and this app will:
+- 🔍 Extract transactions
+- 🧠 Cluster them by type
+- 📊 Visualize spending
+- 🤖 Suggest personalized financial tips using **local LLM (Ollama)**
+""")
+
+uploaded_file = st.file_uploader("📄 Upload PDF", type="pdf")
 
 if uploaded_file:
     with open("temp.pdf", "wb") as f:
         f.write(uploaded_file.read())
-    
+
     df = extract_transactions("temp.pdf")
-    if df.empty:
-        st.warning("No transactions detected. Please upload a different PDF.")
+
+    if df.empty or len(df) < 2:
+        st.warning("⚠️ Not enough transactions detected. Please upload a longer or clearer statement.")
     else:
         df = cluster_transactions(df)
 
         st.subheader("🔍 Extracted Transactions")
-        st.dataframe(df)
+        st.dataframe(df, use_container_width=True)
 
         col1, col2 = st.columns(2)
         with col1:
-            st.subheader("📊 Pie Chart")
+            st.subheader("📊 Spending Breakdown (Pie)")
             plot_spending_pie(df)
         with col2:
-            st.subheader("📈 Bar Chart")
+            st.subheader("📈 Spending Overview (Bar)")
             plot_spending_bar(df)
 
-        st.subheader("💡 AI Advice")
+        st.subheader("💡 AI-Powered Financial Advice")
         with st.spinner("Analyzing your spending..."):
             advice = generate_advice(df)
             st.markdown(advice)

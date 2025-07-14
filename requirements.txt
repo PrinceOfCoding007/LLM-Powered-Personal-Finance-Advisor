@@ -1,0 +1,7 @@
+streamlit
+pdfplumber
+pandas
+scikit-learn
+matplotlib
+langchain
+langchain-community
