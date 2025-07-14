@@ -7,13 +7,13 @@ Upload your bank statement (PDF) and get instant, actionable insights, categoriz
 
 ## 🔍 How It Works
 
-| Step | Description                                   |
-|-------|----------------------------------------------|
-| 1. 🧾 Upload   | Upload your bank statement PDF file         |
-| 2. 🔍 Extract  | Extract transactions with a PDF parser       |
-| 3. 🧠 Cluster  | Group transactions into categories via KMeans|
-| 4. 📊 Visualize| Explore your spending with charts (pie/bar) |
-| 5. 🤖 Advise   | Receive personalized finance advice powered by LLaMA3 |
+| S no.|Step | Description                                   |
+|----|-----|----------------------------------------------|
+| 1. |🧾 Upload   | Upload your bank statement PDF file         |
+| 2. | 🔍 Extract  | Extract transactions with a PDF parser       |
+| 3. | 🧠 Cluster  | Group transactions into categories via KMeans|
+| 4. |📊 Visualize| Explore your spending with charts (pie/bar) |
+| 5. |🤖 Advise   | Receive personalized finance advice powered by LLaMA3 |
 
 
 
