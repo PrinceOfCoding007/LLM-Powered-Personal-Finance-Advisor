@@ -4,13 +4,6 @@
 
 Upload your bank statement (PDF) and get instant, actionable insights, categorized spending, and personalized advice — all through an interactive dashboard with rich visualizations.
 
----
-
-## 🚀 Live Demo
-
-![App Screenshot](https://via.placeholder.com/800x400.png?text=App+UI+Screenshot)
-
----
 
 ## 🔍 How It Works
 
@@ -22,7 +15,7 @@ Upload your bank statement (PDF) and get instant, actionable insights, categoriz
 | 4. 📊 Visualize| Explore your spending with charts (pie/bar) |
 | 5. 🤖 Advise   | Receive personalized finance advice powered by LLaMA3 |
 
----
+
 
 ## 🛠️ Technology Stack
 
@@ -33,7 +26,6 @@ Upload your bank statement (PDF) and get instant, actionable insights, categoriz
 - **PDF Parsing:** `PyMuPDF` or `pdfplumber`  
 - **Visualization:** Matplotlib and Streamlit native charts  
 
----
 
 ## 📂 Project Structure
     LLM-project/
@@ -46,7 +38,6 @@ Upload your bank statement (PDF) and get instant, actionable insights, categoriz
     ├── requirements.txt # Python dependencies
     └── sample.pdf # (Optional) Sample bank statement
 
----
 
 ## 🧪 Setup Instructions
 
